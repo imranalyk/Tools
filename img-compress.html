@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online tools for converting images to PDF and compressing image files. No registration required - simple, fast, and privacy-focused tools.">
+  <meta name="keywords" content="image to pdf converter, online image compressor, free tools, jpg to pdf, reduce image size, web tools">
+  <meta name="author" content="Daily Tools Box">
+  <meta property="og:title" content="Daily Tools Box - Free Online Tools">
+  <meta property="og:description" content="Convert images to PDF and compress images with our free online tools">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourwebsite.com/" />
+  <title>Daily Tools Box - Free Image to PDF Converter & Image Compressor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1 {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    .tool-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .tool {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 100%;
+      max-width: 450px;
+      transition: transform 0.3s ease;
+    }
+    .tool:hover {
+      transform: translateY(-5px);
+    }
+    .tool h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    input[type="file"] {
+      margin: 15px 0;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+      width: 100%;
+      max-width: 200px;
+    }
+    button:hover {
+      background: #0069d9;
+    }
+    a.download-link {
+      display: block;
+      margin: 15px auto 0;
+      background: #28a745;
+      color: white;
+      padding: 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      max-width: 200px;
+      transition: background 0.3s;
+    }
+    a.download-link:hover {
+      background: #218838;
+    }
+    footer {
+      margin-top: 40px;
+      color: white;
+      font-size: 0.9em;
+    }
+    .instructions {
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: left;
+    }
+    .ad-container {
+      margin: 30px auto;
+      padding: 15px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 8px;
+      max-width: 728px;
+    }
+    .ad-label {
+      font-size: 0.8em;
+      color: #666;
+      margin-bottom: 5px;
+    }
+    @media (max-width: 600px) {
+      .tool {
+        padding: 15px;
+      }
+      .ad-container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Tools Box 🧰</h1>
+  <p>Free online tools for your daily needs - no registration required!</p>
+  
+  <!-- Top Ad Banner -->
+  <div class="ad-container">
+    <div class="ad-label">Advertisement</div>
+    <!-- Replace with your actual ad unit code -->
+    <!--
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+         data-ad-slot="YOUR_AD_SLOT_ID_TOP"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    -->
+    <div style="min-height: 90px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+      [Advertisement Space - 728x90 or 320x100]
+    </div>
+  </div>
+  
+  <div class="instructions">
+    <h2>How to use our tools:</h2>
+    <ul>
+      <li><strong>Image to PDF:</strong> Select one or more images, click convert, then download your PDF</li>
+      <li><strong>Image Compressor:</strong> Upload an image, click compress, then download the smaller version</li>
+    </ul>
+    <p>All processing happens in your browser - your files never leave your device!</p>
+  </div>
+  
+  <div class="tool-container">
+    <div class="tool">
+      <h2>📷 Image to PDF Converter</h2>
+      <p>Convert multiple images into a single PDF document</p>
+      <input type="file" id="imageToPdfInput" accept="image/*" multiple>
+      <button id="convertPdfBtn">Convert to PDF</button>
+      <a id="downloadPdfLink" class="download-link" href="#" style="display:none" download="converted.pdf">Download PDF</a>
+    </div>
+    
+    <!-- Middle Ad Rectangle -->
+    <div class="ad-container" style="max-width: 300px;">
+      <div class="ad-label">Advertisement</div>
+      <!--
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+       crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+           data-ad-slot="YOUR_AD_SLOT_ID_MID"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      -->
+      <div style="min-height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+        [Advertisement Space - 300x250]
+      </div>
+    </div>
+    
+    <div class="tool">
+      <h2>🖼️ Image Compressor</h2>
+      <p>Reduce image file size while maintaining quality</p>
+      <input type="file" id="compressImageInput" accept="image/*">
+      <button id="compressImageBtn">Compress Image</button>
+      <a id="downloadCompressed" class="download-link" href="#" style="display:none" download="compressed.jpg">Download Compressed Image</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Banner -->
+  <div class="ad-container">
+    <div class="ad-label">Advertisement</div>
+    <!--
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+         data-ad-slot="YOUR_AD_SLOT_ID_BOTTOM"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    -->
+    <div style="min-height: 90px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+      [Advertisement Space - 728x90 or 320x100]
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 Daily Tools Box. All rights reserved.</p>
+    <p>Free to use for personal and commercial purposes.</p>
+  </footer>
+
+  <!-- Google Analytics (replace with your actual ID) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOURIDHERE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YOURIDHERE');
+  </script>
+  -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  <script>
+    // Wait for the jsPDF library to load completely
+    document.addEventListener('DOMContentLoaded', function() {
+      // Image to PDF Converter
+      document.getElementById('convertPdfBtn').addEventListener('click', async function() {
+        const input = document.getElementById('imageToPdfInput');
+        const files = input.files;
+        if (files.length === 0) return alert('Please select at least one image to convert.');
+        
+        try {
+          const { jsPDF } = window.jspdf;
+          const pdf = new jsPDF();
+          
+          for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const img = await loadImage(file);
+            
+            const width = pdf.internal.pageSize.getWidth();
+            const height = (img.height * width) / img.width;
+            
+            pdf.addImage(img, 'JPEG', 0, 0, width, height);
+            if (i < files.length - 1) pdf.addPage();
+          }
+          
+          const pdfBlob = pdf.output('blob');
+          const pdfUrl = URL.createObjectURL(pdfBlob);
+          
+          const link = document.getElementById('downloadPdfLink');
+          link.href = pdfUrl;
+          link.style.display = 'inline-block';
+          
+          // Clean up previous URL if any
+          if (link._blobUrl) URL.revokeObjectURL(link._blobUrl);
+          link._blobUrl = pdfUrl;
+          
+        } catch (error) {
+          console.error('PDF conversion error:', error);
+          alert('Error creating PDF. Please try again with different images.');
+        }
+      });
+      
+      // Image Compressor
+      document.getElementById('compressImageBtn').addEventListener('click', function() {
+        const input = document.getElementById('compressImageInput');
+        const file = input.files[0];
+        if (!file) return alert('Please select an image to compress.');
+        
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const img = new Image();
+          img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Maintain aspect ratio while resizing
+            const maxWidth = 1200;
+            const maxHeight = 1200;
+            let width = img.width;
+            let height = img.height;
+            
+            if (width > maxWidth) {
+              height = (height * maxWidth) / width;
+              width = maxWidth;
+            }
+            
+            if (height > maxHeight) {
+              width = (width * maxHeight) / height;
+              height = maxHeight;
+            }
+            
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(img, 0, 0, width, height);
+            
+            canvas.toBlob(function(blob) {
+              const url = URL.createObjectURL(blob);
+              const link = document.getElementById('downloadCompressed');
+              
+              // Clean up previous URL if any
+              if (link._blobUrl) URL.revokeObjectURL(link._blobUrl);
+              
+              link.href = url;
+              link.style.display = 'inline-block';
+              link._blobUrl = url;
+              
+              // Show size reduction to user
+              const originalSize = (file.size / 1024).toFixed(2);
+              const compressedSize = (blob.size / 1024).toFixed(2);
+              link.textContent = `Download (${compressedSize}KB from ${originalSize}KB)`;
+              
+            }, 'image/jpeg', 0.75); // 0.75 quality (75%)
+          };
+          img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+      
+      // Helper function to load images
+      function loadImage(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = e.target.result;
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
